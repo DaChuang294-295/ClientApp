@@ -154,7 +154,7 @@ public class client1 extends JFrame
 	{ // 此子程序的功能是向服务器端传递信息
 		try {
 			message = s;
-			output.println("Client1:  " + s); // 将文本框中的内容发送PrintStream缓冲区中
+			output.println(s); // 将文本框中的内容发送PrintStream缓冲区中
 			output.flush();
 			enter.setText("");
 		} catch (Exception e) {

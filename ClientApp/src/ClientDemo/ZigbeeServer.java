@@ -129,16 +129,11 @@ public class ZigbeeServer implements Runnable{
 		public void run() 
 		{
 			try {
-				while ((message = (String) input.readLine())!=null){
-					message = (String) input.readLine();
-					System.out.println(message+"hi!\n"); // 在文本域显示客户端传递的信息
-                                        Character lastChar1 = message.charAt(4);
-                                        Character lastChar2 = message.charAt(3);
-                                        char damp1[]={lastChar2,lastChar1};
+				while ((message =  input.readLine())!=null){
+					//System.out.println(message+"hi!\n"); // 在文本域显示客户端传递的信息
+                                        String damp1=message.substring(3,5);
                                         damp = String.valueOf(damp1);
-                                        Character lastChar4 = message.charAt(2);
-                                        Character lastChar5 = message.charAt(1);
-                                        char temp1[]={lastChar5,lastChar4};
+                                        String temp1=message.substring(0,2);
                                         temp = String.valueOf(temp1);
                                         System.out.println(damp1+"!\n");
                                         System.out.println(temp1+"!\n");
